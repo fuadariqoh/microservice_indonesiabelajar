@@ -12,6 +12,7 @@ const api = apiAdapter(URL_SERVICE_USER);
 
 module.exports = async (req, res) => {
   try {
+    console.log(req.body)
     const user = await api.post("/users/login", req.body);
     const data = user.data.data;
 
