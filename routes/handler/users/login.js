@@ -27,6 +27,8 @@ module.exports = async (req, res) => {
       refresh_token: refreshToken,
       user_id: data.id,
     });
+    
+    console.log("token = ",token,"refresh_token = ",refreshToken)
 
     return res.json({
       status: "success",
