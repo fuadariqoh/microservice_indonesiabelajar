@@ -15,6 +15,7 @@ module.exports = async (req, res) => {
     console.log(req.body)
     const user = await api.post("/users/login", req.body);
     const data = user.data.data;
+     console.log(data,"masuk data")
 
     const token = jwt.sign({ data }, JWT_SECRET, {
       expiresIn: JWT_ACCESS_TOKEN_EXPIRED,
